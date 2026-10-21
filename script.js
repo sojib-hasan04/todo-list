@@ -8,6 +8,15 @@ addBtn.addEventListener("click", function() {
     }
     const li = document.createElement("li");
     li.textContent = taskInput.value;
+
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Delete";
+    li.appendChild(delBtn);
+
+    delBtn.addEventListener("click", function() {
+        li.remove();
+    });
+
     taskList.appendChild(li);
     taskInput.value = "";
 });
